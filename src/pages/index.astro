@@ -1,0 +1,128 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { SITE, CATEGORIES, CATEGORY_NAMES, KANTAN_ORDER, FAQS, SISTER_BLOGS, slugOf } from '../data/site';
+
+const articles = await getCollection('articles');
+const bySlug = new Map(articles.map((a) => [slugOf(a.id), a]));
+// 旧サイトのカードの並び（いちおしFreecash→ポイントサイト→SNS・動画→支払い・お買い物→通信・銀行・その他→AIアシスタント→新しいポイ活アプリ）
+const ordered = KANTAN_ORDER.map((s) => bySlug.get(s)!).filter(Boolean);
+const featured = bySlug.get('freecash')!;
+const byCategory = (slug: string) => ordered.filter((a) => a.data.category === slug);
+
+const itemList = ordered.map((a, i) => ({
+  '@type': 'ListItem',
+  position: i + 1,
+  name: `${a.data.service} ${a.data.code ? `紹介コード ${a.data.code}` : ''} ${a.data.benefit}`,
+}));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'メアのかんたん紹介コード案内｜招待コード・紹介コードまとめ',
+      description: SITE.description,
+      inLanguage: 'ja',
+      dateModified: SITE.dateModified,
+    },
+    { '@type': 'ItemList', name: 'かんたん紹介コード案内 サービス一覧', numberOfItems: 19, itemListElement: itemList },
+    {
+      '@type': 'FAQPage',
+      mainEntity: FAQS.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'かんたん紹介コード案内 トップ' },
+      ],
+    },
+  ],
+};
+
+const title = 'メアのかんたん紹介コード案内｜招待コード・紹介コードまとめ';
+---
+
+<BaseLayout title={title} description={SITE.description} canonicalPath="/" jsonLd={jsonLd}>
+  <div class="wrap">
+    <div class="hero">
+      <img src="/images/hero.jpg" alt="ピンクの背景でメアがポイ活×招待コード×紹介系をお届けするバナー（一緒におトクをGETしよう♡）" width="1179" height="393" />
+    </div>
+
+    <div class="pr-box">
+      このページのコードは、全部メアの紹介コードだよ💌 このページに載せている紹介コード・招待コード・紹介リンクは、すべてメアの紹介だよ。下のボタンやリンクから登録したり、コードを使って各サービスの条件を満たしたりすると、メアにポイントや報酬などの紹介報酬が発生する場合があります。紹介を使っても、あなたに追加の料金や不利な条件は一切ないから安心してね♡ むしろ各カードに書いた紹介特典（ボーナスポイントなど）がもらえる仕組みだよ。特典の金額は条件をすべて満たした場合の最大値で、もらえるかどうかは各サービスの公式条件で決まります。くわしくはページ下部の<a href="/ad-disclosure/">「広告・紹介報酬に関する表示」</a>を見てね。
+    </div>
+
+    <p class="article-meta">🎀 全19サービス・登録はすべて無料だよ／最終更新：2026年11月19日／特典額・条件は各サービスの紹介キャンペーン内容をもとに掲載しているよ♪ キャンペーンは予告なく変更・終了する場合があるから、登録前に公式ページもチェックしてね💡</p>
+
+    <h1>紹介コードは、メアにおまかせ♡</h1>
+    <p class="lead">
+      はじめまして、メアだよ💖 ポイ活大好きな私が集めた紹介コードを、大きな文字で分かりやすくまとめたの✨ 気になるサービスのコードをコピーして、ボタンから登録するだけ！ 一緒におトクをGETしようね♪
+    </p>
+
+    <AdSlot />
+
+    <h2 id="howto">使い方はかんたん3ステップだよ✨</h2>
+    <ol class="steps">
+      <li><strong>サービスを選ぶ</strong> — 下のリストから、気になるサービスを見つけてね♪</li>
+      <li><strong>コードをコピーする</strong> — 黒い枠の横の「コピー」ボタンを押すだけ！ 手入力はいらないよ◎</li>
+      <li><strong>ボタンから登録する</strong> — ピンクのボタンを押して登録してね。コードの入力欄があったら貼り付けてね♡</li>
+    </ol>
+
+    <h2 id="featured">メアのいちおし💖</h2>
+    <p>いま一番おすすめの「Freecash」だよ✨ ゲームで遊んで<strong>約1,430円相当</strong>🎮</p>
+    <ServiceCard article={featured} showBody={true} />
+
+    {CATEGORIES.map((c) => (
+      <>
+        <h2 id={c.slug}>{c.name === 'ポイントサイト' ? 'ポイントサイト✨' : c.name === 'SNS・動画' ? 'SNS・動画アプリ🎵' : c.name === '支払い・お買い物' ? '支払い・お買い物🛍️' : c.name === '通信・銀行・その他' ? '通信・銀行・その他📱' : c.name === 'AIアシスタント' ? 'AIアシスタント🤖' : '新しいポイ活アプリ🌸'}</h2>
+        <div class="card-grid">
+          {byCategory(c.slug).map((a) => (
+            <ServiceCard article={a} />
+          ))}
+        </div>
+      </>
+    ))}
+
+    <AdSlot />
+
+    <h2 id="sisters">メアのほかのブログも見てみてね♡</h2>
+    <p>同じ紹介コードを、ちがう見た目・使い方で紹介しているメアのブログだよ♪ お好みのページで見てね！</p>
+    <ul>
+      {SISTER_BLOGS.map((b) => (
+        <li><a href={b.url} target="_blank" rel="noopener">{b.name}</a>：{b.note}</li>
+      ))}
+    </ul>
+
+    <h2 id="faq">よくある質問💡</h2>
+    {FAQS.map((f) => (
+      <div class="faq-item">
+        <h3>{f.q}</h3>
+        <p>{f.a}</p>
+      </div>
+    ))}
+    <p><a href="/faq/">よくある質問の一覧を見る →</a></p>
+
+    <h2>📂 カテゴリー</h2>
+    <ul>
+      {CATEGORIES.map((c) => (
+        <li><a href={`/categories/${c.slug}/`}>{c.name}</a>（{byCategory(c.slug).length}）</li>
+      ))}
+    </ul>
+
+    <h2>🌐 全媒体の入口</h2>
+    <p><a href={SITE.hubUrl} target="_blank" rel="noopener">メアのポイ活メディア（トップページ）</a> — ホームページ・ブログ・掲示板・note・Xなど、メアの媒体はここからたどれます♪</p>
+
+    <h2>🎀 このかんたん紹介コード案内について</h2>
+    <p>ポイ活大好きなメアが、実際に使っている紹介コードだけを、初めての人にも分かりやすいように大きな文字でまとめた案内だよ💖 特典額や条件が変わったら随時更新していくね♪</p>
+    <p><a href="/about/">運営者情報を見る →</a></p>
+
+    <AdSlot />
+  </div>
+</BaseLayout>

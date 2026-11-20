@@ -1,0 +1,1 @@
+{"dependencies":{"astro":"^5.0.0"},"description":"かんたん紹介コード案内（メアのポイ活メディア）— 初心者向けのかんたん案内・Astro＋Markdown、Cloudflare Pagesで公開。","name":"mea-kantan-guide","private":true,"scripts":{"build":"astro build","dev":"astro dev","preview":"astro preview"},"type":"module","version":"1.0.0"}
