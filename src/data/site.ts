@@ -6,7 +6,7 @@ export const SITE = {
   siteUrl: 'https://coolcoolcoolcool161-a11y.github.io/mea-kantan-guide',
   description:
     'メアのかんたん紹介コード案内｜ワラウ・ハピタス・モッピー・Freecash・TikTokなど全19サービスの紹介コード・招待コードを、大きな文字で分かりやすく案内。コードをコピーしてボタンから登録するだけ。',
-  dateModified: '2026-11-19',
+  dateModified: '2026-11-21',
   gaMeasurementId: 'G-8BB8V3DRW8',
   xAccount: 'https://x.com/pppppuririn',
   hubUrl:
