@@ -19,6 +19,8 @@ image: "https://coolcoolcoolcool161-a11y.github.io/mea-poikatsu-blog/images/bann
 
 見るだけ・参加するだけで報酬チャンスがある「TikTok」🎵 新規登録で特典対象だよ。登録するときはWi-FiをOFFにしてモバイル通信で招待URLを直接開くのがポイント。これだけは忘れずにね♪
 
+![TikTokの招待特典（最大6,000円分）の案内画像](/images/tiktok-promo-mea.webp)
+
 ## もらえる特典
 
 - **特典**：6,000円分の報酬チャンス
