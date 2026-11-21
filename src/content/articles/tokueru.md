@@ -7,6 +7,7 @@ benefit: "登録で5,000ポイント"
 benefitSub: "新規登録でコード入力"
 code: "9459GJ"
 url: "https://tokueru.jp/invitations/9459GJ"
+image: "/images/banner-tokueru.jpg"
 dateModified: "2026-11-19"
 points:
 - "特典：あなたに5,000ポイント"

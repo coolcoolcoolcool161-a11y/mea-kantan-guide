@@ -7,6 +7,7 @@ benefit: "500ptプレゼント"
 benefitSub: "登録時にコード入力"
 code: "AZ3pOY"
 url: "https://bit.ly/4fEUA8S"
+image: "/images/banner-orikuji.jpg"
 dateModified: "2026-11-19"
 points:
 - "特典：500ptプレゼント"

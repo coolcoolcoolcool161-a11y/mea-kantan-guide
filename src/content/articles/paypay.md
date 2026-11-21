@@ -7,6 +7,7 @@ benefit: "300pt もらえる"
 benefitSub: "コード入力＋1,000円以上の支払い"
 code: "02-49XLFP8"
 url: "https://s.paypay.ne.jp/5HWsZW"
+image: "/images/banner-paypay.jpg"
 dateModified: "2026-11-19"
 sortYen: 300
 points:

@@ -7,6 +7,7 @@ benefit: "1,400円分の報酬チャンス"
 benefitSub: "新規登録"
 code: "890270647"
 url: "https://lite.tiktok.com/t/ZS9f73unLbRXS-wsJMe/"
+image: "/images/banner-tiktok-lite.jpg"
 dateModified: "2026-11-19"
 sortYen: 1400
 points:
