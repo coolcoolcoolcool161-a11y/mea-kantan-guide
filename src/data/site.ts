@@ -3,14 +3,14 @@
 export const SITE = {
   name: 'かんたん紹介コード案内',
   operator: 'メア',
-  siteUrl: 'https://coolcoolcoolcool161-a11y.github.io/mea-kantan-guide',
+  siteUrl: 'https://mea-poikatsu.github.io/mea-kantan-guide',
   description:
     'メアのかんたん紹介コード案内｜ワラウ・ハピタス・モッピー・Freecash・TikTokなど全19サービスの紹介コード・招待コードを、大きな文字で分かりやすく案内。コードをコピーしてボタンから登録するだけ。',
   dateModified: '2026-11-21',
   gaMeasurementId: 'G-8BB8V3DRW8',
   xAccount: 'https://x.com/pppppuririn',
   hubUrl:
-    'https://coolcoolcoolcool161-a11y.github.io/mea-poikatsu-media/',
+    'https://mea-poikatsu.github.io/mea-poikatsu-media/',
 } as const;
 
 // Astro 5ではcontent collectionのentry.idに拡張子（.md）が付くため、URL用スラッグに変換する
@@ -60,27 +60,27 @@ export const SISTER_BLOGS = [
   {
     name: 'ポイ活ブログ',
     note: 'ランキングや特集が充実した総合版',
-    url: 'https://coolcoolcoolcool161-a11y.github.io/mea-poikatsu-blog/',
+    url: 'https://mea-poikatsu.github.io/mea-poikatsu-blog/',
   },
   {
     name: 'おすすめ紹介コード',
     note: 'メアのおすすめ順に並べた紹介コード版',
-    url: 'https://coolcoolcoolcool161-a11y.github.io/mea-ranking/',
+    url: 'https://mea-poikatsu.github.io/mea-ranking/',
   },
   {
     name: 'ポイ活コード検索',
     note: 'サービス名で検索してすぐ探せる検索版',
-    url: 'https://coolcoolcoolcool161-a11y.github.io/mea-code-search/',
+    url: 'https://mea-poikatsu.github.io/mea-code-search/',
   },
   {
     name: 'ポイ活マガジン',
     note: '読み物スタイルでじっくり紹介する雑誌版',
-    url: 'https://coolcoolcoolcool161-a11y.github.io/mea-poikatsu-magazine/',
+    url: 'https://mea-poikatsu.github.io/mea-poikatsu-magazine/',
   },
   {
     name: 'ゲームポイ活ブログ',
     note: 'ゲームで貯める案件に特化した版',
-    url: 'https://coolcoolcoolcool161-a11y.github.io/mea-game-poikatsu/',
+    url: 'https://mea-poikatsu.github.io/mea-game-poikatsu/',
   },
 ] as const;
 
