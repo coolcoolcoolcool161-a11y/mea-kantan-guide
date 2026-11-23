@@ -36,10 +36,10 @@ export const CATEGORY_NAMES: Record<string, string> = Object.fromEntries(
 export const KANTAN_ORDER = [
   'freecash',
   'warau',
-  'hapitas',
-  'moppy',
   'tiktok',
   'tiktok-lite',
+  'moppy',
+  'hapitas',
   'paypay',
   'mercari',
   'airwallet',
