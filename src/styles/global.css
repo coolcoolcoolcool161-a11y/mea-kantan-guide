@@ -449,3 +449,40 @@ tbody tr:hover { background: #fff0f5; }
    本文 = LINE Seed JP（Webフォント）/ 見出し = 丸ゴシック系（S07のみ角ゴシック） */
 h1, h2, h3, .brand { font-family: var(--font-heading); }
 h1, .brand { font-weight: 900; }
+
+/* === S06再構築（2026-11-25）伴走コーチ型：ノート罫線＋吹き出し伴走 === */
+.pace-banner { margin: 14px 0 6px; padding: 12px 16px; border-radius: 999px; background: linear-gradient(90deg, #d81b60, #ad1457); color: #fff; font-weight: 800; font-size: clamp(1.05rem, 3.6vw, 1.45rem); text-align: center; letter-spacing: 0.02em; box-shadow: 0 4px 14px rgba(216, 27, 96, 0.35); }
+
+/* 現在地チェック（ステップへの入口チップ） */
+.coach-position { background: var(--color-primary-soft); border: 1px solid var(--color-primary-line); border-radius: var(--radius-md); padding: 12px 16px; margin: 20px 0; }
+.coach-position-title { margin: 0 0 8px; font-weight: 700; font-size: var(--text-sm); }
+.coach-position-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.coach-position-list a { display: inline-block; background: #fff; border: 1px solid var(--color-primary-line); border-radius: var(--radius-pill); padding: 6px 12px; font-size: var(--text-sm); font-weight: 700; text-decoration: none; color: var(--pink-dark); box-shadow: var(--shadow-card); }
+.coach-position-list a:hover { background: var(--color-primary-soft); }
+
+/* ノート罫線のステージ */
+.coach-notebook {
+  position: relative;
+  border: 1px solid var(--color-primary-line);
+  border-radius: var(--radius-md);
+  padding: 20px 16px 8px 22px;
+  margin: 16px 0 24px;
+  background:
+    linear-gradient(90deg, transparent 0 12px, rgba(216, 27, 96, 0.28) 12px, rgba(216, 27, 96, 0.28) 13px, transparent 13px),
+    repeating-linear-gradient(#fff, #fff 31px, var(--color-primary-line) 31px, var(--color-primary-line) 32px);
+  box-shadow: var(--shadow-card);
+}
+.coach-step { position: relative; background: rgba(255, 255, 255, 0.92); border: 1px solid var(--color-primary-line); border-radius: var(--radius-md); padding: 14px 16px; margin: 0 0 16px; box-shadow: var(--shadow-card); scroll-margin-top: 90px; }
+.coach-step-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.coach-step-badge { flex-shrink: 0; background: linear-gradient(135deg, #d81b60, #ad1457); color: #fff; font-weight: 900; font-size: var(--text-sm); border-radius: var(--radius-pill); padding: 3px 12px; letter-spacing: 0.04em; }
+.coach-step-head h3 { margin: 0; font-size: var(--text-h3); }
+.coach-step-todo { margin: 6px 0 10px; }
+.coach-step-pitfall { background: var(--color-notice-bg); border: 1px solid var(--color-notice-line); border-radius: var(--radius-sm); padding: 8px 12px; font-size: var(--text-sm); margin: 0 0 10px; }
+.pitfall-label { display: block; font-weight: 800; color: #8d6e00; margin-bottom: 2px; }
+/* コーチの吹き出し */
+.coach-note { position: relative; background: var(--color-primary-soft); border: 1px solid var(--color-primary-line); border-radius: var(--radius-md); padding: 10px 14px; font-size: var(--text-sm); margin: 0 0 10px; }
+.coach-note::before { content: ''; position: absolute; top: -7px; left: 28px; width: 12px; height: 12px; background: var(--color-primary-soft); border-top: 1px solid var(--color-primary-line); border-left: 1px solid var(--color-primary-line); transform: rotate(45deg); }
+.coach-note-label { display: block; font-weight: 800; color: var(--pink-dark); margin-bottom: 2px; }
+.coach-step-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: var(--text-sm); font-weight: 700; }
+.coach-section { scroll-margin-top: 80px; }
+#recommend, #faq, #service-list { scroll-margin-top: 80px; }

@@ -6,7 +6,7 @@ export const SITE = {
   siteUrl: 'https://mea-poikatsu.github.io/mea-kantan-guide',
   description:
     'メアのポイ活のトリセツ｜ワラウ・ハピタス・モッピー・Freecash・TikTokなど全19サービスの紹介コード・招待コードを、大きな文字で分かりやすく案内。コードをコピーしてボタンから登録するだけ。',
-  dateModified: '2026-11-21',
+  dateModified: '2026-11-25',
   gaMeasurementId: 'G-8BB8V3DRW8',
   xAccount: 'https://x.com/pppppuririn',
   hubUrl:
