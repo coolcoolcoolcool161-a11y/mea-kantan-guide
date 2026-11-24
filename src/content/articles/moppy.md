@@ -7,7 +7,7 @@ benefit: "最大7,000Pのチャンス"
 benefitSub: "登録＋広告利用5,000P以上"
 code: "7xaGA123"
 url: "https://pc.moppy.jp/entry/invite.php?invite=7xaGA123"
-image: "/images/banner-official-moppy.jpg"
+image: "/images/banner-moppy.jpg"
 imageAlt: "モッピーの紹介バナー"
 dateModified: "2026-11-19"
 sortYen: 7000

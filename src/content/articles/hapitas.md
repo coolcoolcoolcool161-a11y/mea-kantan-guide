@@ -7,7 +7,7 @@ benefit: "最大2,300P"
 benefitSub: "登録＋条件達成（11月限定）"
 code: "INXAHV"
 url: "https://hapitas.jp/appinvite?i=26164523"
-image: "/images/banner-official-hapitas.png"
+image: "/images/banner-hapitas.jpg"
 imageAlt: "ハピタスの紹介バナー"
 dateModified: "2026-11-19"
 sortYen: 2300

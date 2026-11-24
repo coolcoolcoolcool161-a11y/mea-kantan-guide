@@ -7,7 +7,7 @@ benefit: "最大2,500pt"
 benefitSub: "紹介経由の新規登録"
 code: "bEs7"
 url: "https://www.warau.jp/friend/reg/bEs5"
-image: "/images/banner-official-warau.png"
+image: "/images/banner-warau.jpg"
 imageAlt: "ワラウの紹介バナー"
 dateModified: "2026-11-19"
 sortYen: 2500
