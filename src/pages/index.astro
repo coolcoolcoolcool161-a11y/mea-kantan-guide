@@ -23,12 +23,12 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebPage',
-      name: 'メアのかんたん紹介コード案内｜招待コード・紹介コードまとめ',
+      name: 'メアのポイ活のトリセツ｜招待コード・紹介コードまとめ',
       description: SITE.description,
       inLanguage: 'ja',
       dateModified: SITE.dateModified,
     },
-    { '@type': 'ItemList', name: 'かんたん紹介コード案内 サービス一覧', numberOfItems: 19, itemListElement: itemList },
+    { '@type': 'ItemList', name: 'ポイ活のトリセツ サービス一覧', numberOfItems: 19, itemListElement: itemList },
     {
       '@type': 'FAQPage',
       mainEntity: FAQS.map((f) => ({
@@ -40,13 +40,13 @@ const jsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'かんたん紹介コード案内 トップ', item: SITE.siteUrl + '/' },
+        { '@type': 'ListItem', position: 1, name: 'ポイ活のトリセツ トップ', item: SITE.siteUrl + '/' },
       ],
     },
   ],
 };
 
-const title = 'メアのかんたん紹介コード案内｜招待コード・紹介コードまとめ';
+const title = 'メアのポイ活のトリセツ｜招待コード・紹介コードまとめ';
 ---
 
 <BaseLayout title={title} description={SITE.description} canonicalPath="/" jsonLd={jsonLd}>
@@ -124,9 +124,9 @@ const title = 'メアのかんたん紹介コード案内｜招待コード・�
     </ul>
 
     <h2>🌐 全媒体の入口</h2>
-    <p><a href={SITE.hubUrl} target="_blank" rel="noopener">メアのポイ活メディア（トップページ）</a> — ホームページ・ブログ・掲示板・note・Xなど、メアの媒体はここからたどれます♪</p>
+    <p><a href={SITE.hubUrl} target="_blank" rel="noopener">ポイ活ポータル（トップページ）</a> — ホームページ・ブログ・掲示板・note・Xなど、メアの媒体はここからたどれます♪</p>
 
-    <h2>🎀 このかんたん紹介コード案内について</h2>
+    <h2>🎀 このポイ活のトリセツについて</h2>
     <p>ポイ活大好きなメアが、実際に使っている紹介コードだけを、初めての人にも分かりやすいように大きな文字でまとめた案内だよ💖 特典額や条件が変わったら随時更新していくね♪</p>
     <p><a href="/mea-kantan-guide/about/">運営者情報を見る →</a></p>
 

@@ -1,11 +1,11 @@
 // サイト共通の設定。GA4測定IDはユーザーから提供され次第ここに入れる。
 // 空のままならGA4スクリプトは出力されない。
 export const SITE = {
-  name: 'かんたん紹介コード案内',
+  name: 'ポイ活のトリセツ',
   operator: 'メア',
   siteUrl: 'https://mea-poikatsu.github.io/mea-kantan-guide',
   description:
-    'メアのかんたん紹介コード案内｜ワラウ・ハピタス・モッピー・Freecash・TikTokなど全19サービスの紹介コード・招待コードを、大きな文字で分かりやすく案内。コードをコピーしてボタンから登録するだけ。',
+    'メアのポイ活のトリセツ｜ワラウ・ハピタス・モッピー・Freecash・TikTokなど全19サービスの紹介コード・招待コードを、大きな文字で分かりやすく案内。コードをコピーしてボタンから登録するだけ。',
   dateModified: '2026-11-21',
   gaMeasurementId: 'G-8BB8V3DRW8',
   xAccount: 'https://x.com/pppppuririn',
@@ -16,7 +16,7 @@ export const SITE = {
 // Astro 5ではcontent collectionのentry.idに拡張子（.md）が付くため、URL用スラッグに変換する
 export const slugOf = (id: string) => id.replace(/\.md$/, '');
 
-// 旧サイト（かんたん紹介コード案内 v16）の見出し分け（6部門）
+// 旧サイト（ポイ活のトリセツ v16）の見出し分け（6部門）
 export const CATEGORIES = [
   { slug: 'point-sites', name: 'ポイントサイト' },
   { slug: 'sns-video', name: 'SNS・動画' },
@@ -58,27 +58,27 @@ export const KANTAN_ORDER = [
 // 姉妹ブログ（旧サイトの「メアのほかのブログも見てみてね♡」5件。旧muse.ai URL。2026-11-21にGitHub Pagesの新URLへ更新済み）
 export const SISTER_BLOGS = [
   {
-    name: 'ポイ活ブログ',
+    name: 'ポイ活レビュー帖',
     note: 'ランキングや特集が充実した総合版',
     url: 'https://mea-poikatsu.github.io/mea-poikatsu-blog/',
   },
   {
-    name: 'おすすめ紹介コード',
+    name: 'ポイランク',
     note: 'メアのおすすめ順に並べた紹介コード版',
     url: 'https://mea-poikatsu.github.io/mea-ranking/',
   },
   {
-    name: 'ポイ活コード検索',
+    name: 'コードサーチ',
     note: 'サービス名で検索してすぐ探せる検索版',
     url: 'https://mea-poikatsu.github.io/mea-code-search/',
   },
   {
-    name: 'ポイ活マガジン',
+    name: 'ポイレーダー',
     note: '読み物スタイルでじっくり紹介する雑誌版',
     url: 'https://mea-poikatsu.github.io/mea-poikatsu-magazine/',
   },
   {
-    name: 'ゲームポイ活ブログ',
+    name: 'ポイゲークエスト',
     note: 'ゲームで貯める案件に特化した版',
     url: 'https://mea-poikatsu.github.io/mea-game-poikatsu/',
   },
